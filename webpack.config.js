@@ -1,0 +1,27 @@
+const path = require("path");
+
+
+module.exports = {
+    mode:"development",
+    entry: "./src/app.js",
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js"
+    },
+    devServer: {
+        static: "./dist"
+    },
+    devtool: 'inline-source-map',
+    module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+          },
+          {
+            test: /\.(woff|woff2|eot|ttf|otf)$/i,
+            type: 'asset/resource',
+          }
+        ],
+      },
+};

@@ -1,0 +1,142 @@
+@font-face {
+    font-family: stopWatch;
+    src: url('../font/Stopwatch\ W00\ Regular.ttf');
+}
+
+@font-face {
+    font-family: Jersey;
+    src: url('../font/JerseyM54-aLX9.ttf');
+}
+
+*{
+    margin: 3px;
+    padding: 5px;
+    font-family: stopWatch;
+}
+
+body{
+    max-height: 94vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    cursor: auto;
+}
+
+#root{
+
+    display: flex;
+    min-height: 98vh;
+    min-width: 98vw;
+}
+
+.stopWatch{
+
+    display: grid;
+    grid-template-rows: 45% 25% 25%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    row-gap: 5px;
+    width: 50%;
+}
+
+h1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 600%;
+}
+
+button{
+
+    display: inline-block;
+    padding: 10px 10px;
+    font-family: Jersey;
+    font-size: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #1e65c2;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 7px #999;
+    color: white;
+    width: 60%;
+    height: 55%;
+    margin: 0 auto;
+}
+
+button:hover{
+    background-color: deepskyblue;
+    color: black;
+}
+
+button:active{
+    background-color: crimson;
+    box-shadow: 0 3px rgb(88, 88, 88);
+    transform: translateY(5px);
+    transition-duration: 0.10s;
+}
+
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.start{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-right: 20px;
+}
+
+.stop{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 20px;
+}
+
+.reset{
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-block-end: auto;
+}
+
+.lapButton{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-block-end: auto;
+}
+
+.deleteSelected{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 100px;
+}
